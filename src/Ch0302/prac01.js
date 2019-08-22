@@ -24,14 +24,16 @@ const widget = {
   }
 };
 //벨류 타입 typeOf()활용.
-const result = [];
+const answer = [];
+function solution(d) {
+  Object.keys(d).forEach(function(k) {
+    if (typeof d[k] == "object") {
+      return solution(d[k]);
+    } else if (typeof d[k] == "number") {
+      answer.push(k);
+    }
+  });
+}
 
-Object.keys(widget).forEach(function(k) {
-  if (typeof widget[k] == "object") {
-    return widget.k;
-  } else if (typeof widget[k] == "number") {
-    result.push(k);
-  }
-});
-
-console.log(result);
+solution(widget);
+console.log(answer);
