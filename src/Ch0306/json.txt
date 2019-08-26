@@ -1,0 +1,18 @@
+[
+    {
+        "name" : "AAA",
+        "favorites" : ["golf","facebook"]
+    },
+    {
+        "name" : "BBB",
+        "favorites" : ["soccer","apple"]
+    },
+    {
+        "name" : "CCC",
+        "favorites" : ["game","orange"]
+    },
+    {
+        "name" : "DDD",
+        "favorites" : ["book","youtube"]
+    },
+]
