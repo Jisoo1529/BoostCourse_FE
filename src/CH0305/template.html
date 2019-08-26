@@ -1,0 +1,39 @@
+<html>
+    <header>
+        <style>
+        .content >li{
+            border:1px solid gray;
+            list-style: none;
+        }
+        </style>
+    </header>
+    <body>
+        <h2>Template Test example</h2>
+        <ul class="content"></div>
+    </body>
+
+    <script id="template-list-item" type="text/template">
+        <li>
+            <h4>{title}</h4><p>{content}</p><div>{price}</div>
+        </li>
+      </script>
+
+    <script>
+        //mock data, from server
+        var data = [
+            {title:"hello",content:"monday",price:2000},
+            {title:"hello",content:"tuesday",price: 2100}
+        ];
+        //html에 script에서 가져온 html template
+        var html = document.querySelector("#template-list-item").innerHTML;
+
+        var resultHTML = "";
+        for(var i=0;i<data.length; i++){
+             resultHTML += html.replace("{title}",data[i].title)
+                                .replace("{content}", data[i].content)
+                                .replace("{price}",data[i].price);
+        }
+   
+        document.querySelector(".content").innerHTML = resultHTML;
+    </script>
+    </html>  
