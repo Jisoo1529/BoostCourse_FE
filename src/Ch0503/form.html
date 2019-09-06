@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Join my Website!</h1>
+        <div class = formwrap>
+            <form action = "/join" method ="post" id = "myform">
+                <div class = "inputWrap">
+                    <div class="email">
+                        <span>Email</span> <input type = "text" name = "email"><br/>
+                    </div>
+                    <div class="password">
+                        <span>Password</span> <input type = "password" name="password"><br/>
+                    </div>
+                </div>
+                <input type="submit" class= "sendbtn">
+            </form>
+        </div>
+
+        <section class="result"></section>
+        <script>
+            var btn = document.querySelector(".sendbtn");
+            btn.addEventListener("click",function(evt){
+                evt.preventDefault();//전송버튼 클릭시 바로 서버로 넘어가지 않도록 함. Default로 일어나야하는 일이 일어나지 않음. 
+                console.log("clicked");
+            })
+        </script>
+    </body>
+</html>
